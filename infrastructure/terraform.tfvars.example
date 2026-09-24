@@ -10,3 +10,8 @@ jenkins_ingress_ports = [22, 8080]
 telemetry_ingress_ports = [22, 8081, 9090]
 account_ingress_ports = [22, 8080]
 db_ingress_ports = [22, 5432, 6379]
+
+tags_dynamodb = ["Telemetry Events Table", "dev", "us-east-1"]
+hash_key = "hash"
+range_key = "date"
+billing_mode = "PAY_PER_REQUEST"

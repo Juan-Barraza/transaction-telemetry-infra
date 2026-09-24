@@ -9,3 +9,7 @@ output "public_subnet_id" {
 output "jenkins_security_group_id" {
   value = module.vpc.jenkins_security_group_id
 }
+
+output "table_name" {
+  value = module.dynamodb.table_name
+}

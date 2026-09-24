@@ -20,6 +20,7 @@ module "vpc" {
     source = "./modules/vpc"
     project_name = var.project_name
     environment = var.environment
+    zone = var.zone
     cidr_block_vpc = var.cidr_block_vpc
     public_subnet_cidr = var.public_subnet_cidr
     jenkins_ingress_ports = var.jenkins_ingress_ports
@@ -28,3 +29,12 @@ module "vpc" {
     db_ingress_ports = var.db_ingress_ports
 }
 
+module "dynamodb" {
+    source = "./modules/dynamodb"
+    project_name = var.project_name
+    environment = var.environment
+    tags_dynamodb = var.tags_dynamodb
+    hash_key = var.hash_key
+    range_key = var.range_key
+    billing_mode = var.billing_mode
+}

@@ -41,3 +41,28 @@ variable "db_ingress_ports" {
   description = "Lista de puertos de entrada para Base de Datos"
   type        = list(number)
 }
+variable "zone" {
+  description = "Zona de disponibilidad"
+  type        = string
+}
+
+
+variable "tags_dynamodb" {
+  description = "tags para la tabla de DynamoDB"
+  type        = list(string)
+}
+
+variable "hash_key" {
+    description = "Clave hash para la tabla de DynamoDB"
+    type        = string
+}
+
+variable "range_key" {
+    description = "Clave de rango para la tabla de DynamoDB"
+    type        = string
+}
+variable "billing_mode" {
+    description = "Modo de facturación para la tabla de DynamoDB"
+    type        = string
+    default     = "PAY_PER_REQUEST"
+}

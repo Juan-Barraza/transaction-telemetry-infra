@@ -8,6 +8,11 @@ variable "environment" {
   type        = string
 }
 
+variable "zone" {
+  description = "Zona de disponibilidad"
+  type        = string
+}
+
 variable "cidr_block_vpc" {
   description = "Bloque CIDR asignado a la VPC"
   type        = string
