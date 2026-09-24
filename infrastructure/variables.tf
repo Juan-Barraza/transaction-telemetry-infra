@@ -66,3 +66,21 @@ variable "billing_mode" {
     type        = string
     default     = "PAY_PER_REQUEST"
 }
+variable "ami_id" {
+  description = "ID de la AMI a utilizar para las instancias"
+  type        = string
+}
+
+variable "instance_type" {
+  description = "Tipo de instancia EC2"
+  type        = string
+  default     = "t3.micro"
+}
+
+variable "key_name" {
+  description = "Nombre del Key Pair para acceso SSH (opcional)"
+  type        = string
+  default     = null
+}
+
+

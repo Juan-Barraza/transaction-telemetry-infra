@@ -15,3 +15,6 @@ tags_dynamodb = ["Telemetry Events Table", "dev", "us-east-1"]
 hash_key = "hash"
 range_key = "date"
 billing_mode = "PAY_PER_REQUEST"
+
+ami_id = "ami-000000000000"
+instance_type = "t3.micro"

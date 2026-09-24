@@ -38,3 +38,19 @@ module "dynamodb" {
     range_key = var.range_key
     billing_mode = var.billing_mode
 }
+
+module "ec2" {
+    source = "./modules/ec2"
+    project_name = var.project_name
+    environment = var.environment
+    subnet_id = module.vpc.public_subnet_id
+    ami_id =  var.ami_id
+    instance_type = var.instance_type
+    key_name = data.aws_key_pair.key_pair.key_name
+    user_data_path = "${path.module}/scripts/init-docker.sh"
+    dynamodb_table_arn = module.dynamodb.table_arn
+    jenkins_security_group_id = module.vpc.jenkins_security_group_id
+    telemetry_security_group_id = module.vpc.telemetry_security_group_id
+    account_security_group_id = module.vpc.account_security_group_id
+    db_security_group_id = module.vpc.db_security_group_id
+}
