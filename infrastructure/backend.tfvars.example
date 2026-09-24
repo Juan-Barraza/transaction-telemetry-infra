@@ -1,0 +1,5 @@
+bucket         = "Name_generated_in_bootstrap"
+key            = "dev/architecture/terraform.tfstate"
+region         = "us-east-1"
+use_lockfile   = true
+encrypt        = true

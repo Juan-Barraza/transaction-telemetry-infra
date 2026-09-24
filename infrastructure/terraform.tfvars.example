@@ -1,0 +1,12 @@
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "account-transactions"
+
+cidr_block_vpc = "10.0.0.0/16"
+
+public_subnet_cidr = "10.0.1.0/24"
+
+jenkins_ingress_ports = [22, 8080]
+telemetry_ingress_ports = [22, 8081, 9090]
+account_ingress_ports = [22, 8080]
+db_ingress_ports = [22, 5432, 6379]
